@@ -1,0 +1,30 @@
+# Node modules (si agregas npm packages)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Cache
+.cache/
+*.cache
+
+# Logs
+*.log
+logs/
