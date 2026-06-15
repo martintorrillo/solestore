@@ -1,13 +1,13 @@
 /* ─── PRODUCT DATA ──────────────────────────────────────────── */
 const PRODUCTS = [
-  { id:1,  brand:'Nike',        name:'Air Force 1 Low',    price:180, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:'¡Solo quedan 3 pares!' },
-  { id:2,  brand:'Adidas',      name:'Ultraboost 23',      price:200, oldPrice:260,  badge:'sale',    img:'https://images.unsplash.com/photo-1542219550-cef5b2618bfd?w=500&q=80', urgency:'5 personas lo están viendo' },
-  { id:3,  brand:'Puma',        name:'RS-X Bold',          price:140, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1595777707802-e2e1e7a2b288?w=500&q=80', urgency:null },
-  { id:4,  brand:'Converse',    name:'Chuck 70 Hi',        price:110, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1608231387042-ec3aa5b39601?w=500&q=80', urgency:'¡Últimas unidades!' },
-  { id:5,  brand:'Nike',        name:'Air Max 270',        price:210, oldPrice:250,  badge:'sale',    img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:null },
-  { id:6,  brand:'Fila',        name:'Disruptor 2',        price:90,  oldPrice:120,  badge:'sale',    img:'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80', urgency:null },
-  { id:7,  brand:'DC Shoes',    name:'Pure Skate',         price:100, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1600185365926-19c6694ce3db?w=500&q=80', urgency:'¡Solo quedan 2 pares!' },
-  { id:8,  brand:'New Balance', name:'990v5 Made in USA',  price:290, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:'Edición limitada' },
+  { id:1,  brand:'Nike',        name:'Air Force 1 Low',    price:180, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:'¡Solo quedan 3 pares!' },
+  { id:2,  brand:'Adidas',      name:'Ultraboost 23',      price:200, oldPrice:260,  badge:'sale',    img:'https://images.unsplash.com/photo-1542219550-cef5b2618bfd?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:'5 personas lo están viendo' },
+  { id:3,  brand:'Puma',        name:'RS-X Bold',          price:140, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1595777707802-e2e1e7a2b288?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:null },
+  { id:4,  brand:'Converse',    name:'Chuck 70 Hi',        price:110, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1608231387042-ec3aa5b39601?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:'¡Últimas unidades!' },
+  { id:5,  brand:'Nike',        name:'Air Max 270',        price:210, oldPrice:250,  badge:'sale',    img:'https://images.unsplash.com/photo-1604149490776-04b78e3d87cc?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:null },
+  { id:6,  brand:'Fila',        name:'Disruptor 2',        price:90,  oldPrice:120,  badge:'sale',    img:'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:null },
+  { id:7,  brand:'DC Shoes',    name:'Pure Skate',         price:100, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1600185365926-19c6694ce3db?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:'¡Solo quedan 2 pares!' },
+  { id:8,  brand:'New Balance', name:'990v5 Made in USA',  price:290, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max', urgency:'Edición limitada' },
 ];
 
 const BESTSELLERS = [
