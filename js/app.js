@@ -1,20 +1,20 @@
 /* ─── PRODUCT DATA ──────────────────────────────────────────── */
 const PRODUCTS = [
-  { id:1,  brand:'Nike',        name:'Air Force 1 Low',    price:180, oldPrice:null, badge:'new',     emoji:'👟', color:'#f5f5f5', urgency:'¡Solo quedan 3 pares!' },
-  { id:2,  brand:'Adidas',      name:'Ultraboost 23',      price:200, oldPrice:260,  badge:'sale',    emoji:'👟', color:'#1a1a2e', urgency:'5 personas lo están viendo' },
-  { id:3,  brand:'Puma',        name:'RS-X Bold',          price:140, oldPrice:null, badge:'new',     emoji:'👟', color:'#e8d5b7', urgency:null },
-  { id:4,  brand:'Converse',    name:'Chuck 70 Hi',        price:110, oldPrice:null, badge:'limited', emoji:'👟', color:'#f9f9f9', urgency:'¡Últimas unidades!' },
-  { id:5,  brand:'Nike',        name:'Air Max 270',        price:210, oldPrice:250,  badge:'sale',    emoji:'👟', color:'#0a0a3a', urgency:null },
-  { id:6,  brand:'Fila',        name:'Disruptor 2',        price:90,  oldPrice:120,  badge:'sale',    emoji:'👟', color:'#fff',    urgency:null },
-  { id:7,  brand:'DC Shoes',    name:'Pure Skate',         price:100, oldPrice:null, badge:'new',     emoji:'👟', color:'#1a1a1a', urgency:'¡Solo quedan 2 pares!' },
-  { id:8,  brand:'New Balance', name:'990v5 Made in USA',  price:290, oldPrice:null, badge:'limited', emoji:'👟', color:'#c0c0c0', urgency:'Edición limitada' },
+  { id:1,  brand:'Nike',        name:'Air Force 1 Low',    price:180, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:'¡Solo quedan 3 pares!' },
+  { id:2,  brand:'Adidas',      name:'Ultraboost 23',      price:200, oldPrice:260,  badge:'sale',    img:'https://images.unsplash.com/photo-1542219550-cef5b2618bfd?w=500&q=80', urgency:'5 personas lo están viendo' },
+  { id:3,  brand:'Puma',        name:'RS-X Bold',          price:140, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1595777707802-e2e1e7a2b288?w=500&q=80', urgency:null },
+  { id:4,  brand:'Converse',    name:'Chuck 70 Hi',        price:110, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1608231387042-ec3aa5b39601?w=500&q=80', urgency:'¡Últimas unidades!' },
+  { id:5,  brand:'Nike',        name:'Air Max 270',        price:210, oldPrice:250,  badge:'sale',    img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:null },
+  { id:6,  brand:'Fila',        name:'Disruptor 2',        price:90,  oldPrice:120,  badge:'sale',    img:'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80', urgency:null },
+  { id:7,  brand:'DC Shoes',    name:'Pure Skate',         price:100, oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1600185365926-19c6694ce3db?w=500&q=80', urgency:'¡Solo quedan 2 pares!' },
+  { id:8,  brand:'New Balance', name:'990v5 Made in USA',  price:290, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80', urgency:'Edición limitada' },
 ];
 
 const BESTSELLERS = [
-  { id:9,  brand:'Nike',        name:'Air Jordan 1 Retro', price:320, oldPrice:null, badge:'limited', emoji:'👟', color:'#cc0000', urgency:'¡Edición exclusiva!' },
-  { id:10, brand:'Adidas',      name:'Yeezy Boost 350',    price:380, oldPrice:420,  badge:'sale',    emoji:'👟', color:'#d2cdb9', urgency:'8 personas lo vieron hoy' },
-  { id:11, brand:'Vans',        name:'Old Skool Pro',       price:95,  oldPrice:null, badge:'new',     emoji:'👟', color:'#1a1a1a', urgency:null },
-  { id:12, brand:'Reebok',      name:'Classic Leather',    price:120, oldPrice:150,  badge:'sale',    emoji:'👟', color:'#f0f0f0', urgency:null },
+  { id:9,  brand:'Nike',        name:'Air Jordan 1 Retro', price:320, oldPrice:null, badge:'limited', img:'https://images.unsplash.com/photo-1595777707802-e2e1e7a2b288?w=500&q=80', urgency:'¡Edición exclusiva!' },
+  { id:10, brand:'Adidas',      name:'Yeezy Boost 350',    price:380, oldPrice:420,  badge:'sale',    img:'https://images.unsplash.com/photo-1542219550-cef5b2618bfd?w=500&q=80', urgency:'8 personas lo vieron hoy' },
+  { id:11, brand:'Vans',        name:'Old Skool Pro',       price:95,  oldPrice:null, badge:'new',     img:'https://images.unsplash.com/photo-1608231387042-ec3aa5b39601?w=500&q=80', urgency:null },
+  { id:12, brand:'Reebok',      name:'Classic Leather',    price:120, oldPrice:150,  badge:'sale',    img:'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80', urgency:null },
 ];
 
 /* ─── CART STATE ────────────────────────────────────────────── */
@@ -47,7 +47,7 @@ function renderProducts(containerId, list) {
       <div class="product-img-wrap">
         <div class="product-badges">${badgeHTML(p.badge)}</div>
         <button class="product-wishlist" onclick="event.stopPropagation();toggleWishlist(this)">🤍</button>
-        <img src="${shoeEmoji(p.id, p.color)}" alt="${p.name}" loading="lazy">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" style="width:85%;height:auto;object-fit:contain;">
       </div>
       <div class="product-info">
         <div class="product-brand">${p.brand}</div>
@@ -70,22 +70,6 @@ function badgeHTML(badge) {
   const map = { new:'badge-new', sale:'badge-sale', limited:'badge-limited' };
   const label = { new:'Nuevo', sale:'SALE', limited:'Limited' };
   return `<span class="badge ${map[badge]}">${label[badge]}</span>`;
-}
-
-function shoeEmoji(id, color) {
-  // SVG sneaker placeholder per product
-  const hue = (id * 47) % 360;
-  const enc = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
-    <defs><radialGradient id="g${id}" cx="50%" cy="80%" r="60%"><stop offset="0%" stop-color="${color}" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-    <ellipse cx="100" cy="140" rx="90" ry="12" fill="url(#g${id})"/>
-    <path d="M25 105 Q35 80 65 75 L145 72 Q170 71 178 85 Q183 95 168 103 L35 112 Z" fill="hsl(${hue},60%,55%)"/>
-    <path d="M35 112 L168 103 Q188 99 184 110 Q178 122 148 126 L50 130 Q28 128 35 112Z" fill="hsl(${hue},50%,42%)"/>
-    <path d="M65 75 L72 38 Q76 22 94 26 L120 30 Q135 33 128 50 L115 72Z" fill="${color === '#1a1a1a' ? '#fff' : '#f0f0f0'}"/>
-    <path d="M98 26 L108 22 Q122 19 124 38 L120 30Z" fill="hsl(${hue},70%,60%)"/>
-    <circle cx="62" cy="118" r="12" fill="#222"/><circle cx="62" cy="118" r="6" fill="#444"/>
-    <circle cx="145" cy="110" r="12" fill="#222"/><circle cx="145" cy="110" r="6" fill="#444"/>
-  </svg>`);
-  return `data:image/svg+xml,${enc}`;
 }
 
 /* ─── WISHLIST ──────────────────────────────────────────────── */
@@ -180,7 +164,7 @@ function renderCartItems() {
   el.innerHTML = cart.map((item, idx) => `
     <div class="cart-item">
       <div class="cart-item-img">
-        <img src="${shoeEmoji(item.id, '#888')}" alt="${item.name}">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="cart-item-info">
         <div class="cart-item-brand">${item.brand}</div>
