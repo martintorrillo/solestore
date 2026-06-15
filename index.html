@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoleStore — Sneakers Premium</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>👟</text></svg>">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-items">
+    <span>Envío gratis desde $15.000</span>
+    <span>Devoluciones gratis en 30 días</span>
+    <span>Cuotas sin interés</span>
+    <span>Productos 100% originales</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nav-logo" onclick="showPage('home')">SOLE<span>STORE</span></a>
+  <ul class="nav-links">
+    <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('home')">Hombre</a></li>
+    <li><a href="#" onclick="showPage('home')">Mujer</a></li>
+    <li><a href="#" onclick="showPage('home')">Niños</a></li>
+    <li><a href="#" onclick="showPage('home')">Marcas</a></li>
+    <li><a href="#" onclick="showPage('home')" style="color:var(--lime)">Ofertas 🔥</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-icon-btn" onclick="toggleSearch()" title="Buscar">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+    <button class="nav-icon-btn" title="Favoritos">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>
+    <button class="nav-icon-btn" onclick="openCart()" title="Carrito">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadge">2</span>
+    </button>
+    <button class="nav-hamburger nav-icon-btn">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE: HOME -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Nueva Colección 2025
+        </div>
+        <h1>Las mejores<br>marcas.<br><em>Un solo lugar.</em></h1>
+        <p class="hero-sub">Nike, Adidas, Puma, Converse, Fila, DC y más. Todo original, con envío gratis y hasta 12 cuotas sin interés.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="scrollToProducts()">
+            Ver Novedades
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="scrollToOffers()">Ver Ofertas</button>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">5K+</div>
+            <div class="hero-stat-label">Clientes felices</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">12</div>
+            <div class="hero-stat-label">Marcas premium</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">4.9★</div>
+            <div class="hero-stat-label">Calificación</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-shoe-circle">
+          <img class="hero-shoe-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cellipse cx='200' cy='270' rx='180' ry='20' fill='rgba(204,255,0,0.15)'/%3E%3Cpath d='M60 200 Q80 160 140 150 L280 140 Q340 138 360 160 Q370 175 340 190 L80 210 Z' fill='%23ccff00'/%3E%3Cpath d='M80 210 L340 190 Q380 185 370 200 Q360 215 300 220 L100 225 Q65 222 80 210Z' fill='%23a8cc00'/%3E%3Cpath d='M140 150 L160 80 Q170 60 200 65 L240 70 Q260 72 250 90 L230 140Z' fill='%23ffffff'/%3E%3Cpath d='M200 65 L220 60 Q240 55 245 75 L240 70Z' fill='%23ccff00'/%3E%3Ccircle cx='120' cy='215' r='18' fill='%23333'/%3E%3Ccircle cx='120' cy='215' r='10' fill='%23555'/%3E%3Ccircle cx='280' cy='205' r='18' fill='%23333'/%3E%3Ccircle cx='280' cy='205' r='10' fill='%23555'/%3E%3C/svg%3E" alt="Sneaker hero">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND BAR -->
+  <div class="brand-bar">
+    <div class="brand-track" id="brandTrack">
+      <span class="brand-item">Nike</span>
+      <span class="brand-item">Adidas</span>
+      <span class="brand-item">Puma</span>
+      <span class="brand-item">Converse</span>
+      <span class="brand-item">Fila</span>
+      <span class="brand-item">DC Shoes</span>
+      <span class="brand-item">New Balance</span>
+      <span class="brand-item">Vans</span>
+      <span class="brand-item">Reebok</span>
+      <span class="brand-item">Under Armour</span>
+      <!-- duplicate for infinite scroll -->
+      <span class="brand-item">Nike</span>
+      <span class="brand-item">Adidas</span>
+      <span class="brand-item">Puma</span>
+      <span class="brand-item">Converse</span>
+      <span class="brand-item">Fila</span>
+      <span class="brand-item">DC Shoes</span>
+      <span class="brand-item">New Balance</span>
+      <span class="brand-item">Vans</span>
+      <span class="brand-item">Reebok</span>
+      <span class="brand-item">Under Armour</span>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <span class="trust-icon">🚚</span>
+        <div>
+          <div class="trust-label">Envío gratis</div>
+          <div class="trust-sub">Desde $15.000 en todo el país</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🔄</span>
+        <div>
+          <div class="trust-label">Cambios fáciles</div>
+          <div class="trust-sub">30 días sin preguntas</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">💳</span>
+        <div>
+          <div class="trust-label">Cuotas sin interés</div>
+          <div class="trust-sub">Hasta 12 cuotas con todas las tarjetas</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✅</span>
+        <div>
+          <div class="trust-label">100% Originales</div>
+          <div class="trust-sub">Garantía de autenticidad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVEDADES -->
+  <section class="section" id="productos">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Lo nuevo</div>
+        <h2 class="section-title">Novedades</h2>
+      </div>
+      <button class="btn btn-ghost">Ver todo →</button>
+    </div>
+    <div class="product-grid" id="nuevosGrid"></div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner" id="ofertas">
+    <div class="promo-text">
+      <div class="promo-eyebrow">Colección Running 2025</div>
+      <div class="promo-title">Nike Air Max.<br>Hasta 35% OFF.</div>
+      <div class="promo-sub">Solo por tiempo limitado. ¡No te lo pierdas!</div>
+    </div>
+    <div class="promo-action">
+      <button class="btn btn-dark btn-lg" onclick="scrollToProducts()">
+        Ver Ofertas
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- CATEGORÍAS -->
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Explorar</div>
+        <h2 class="section-title">Categorías</h2>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="cat-icon">🏃</div><div class="cat-label">Running</div></div>
+      <div class="cat-card"><div class="cat-icon">🌆</div><div class="cat-label">Urbano</div></div>
+      <div class="cat-card"><div class="cat-icon">⚽</div><div class="cat-label">Fútbol</div></div>
+      <div class="cat-card"><div class="cat-icon">🏀</div><div class="cat-label">Basketball</div></div>
+      <div class="cat-card"><div class="cat-icon">🛹</div><div class="cat-label">Skate</div></div>
+      <div class="cat-card"><div class="cat-icon">👶</div><div class="cat-label">Niños</div></div>
+    </div>
+  </section>
+
+  <!-- MÁS VENDIDOS -->
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Top picks</div>
+        <h2 class="section-title">Los más elegidos</h2>
+      </div>
+      <button class="btn btn-ghost">Ver todo →</button>
+    </div>
+    <div class="product-grid" id="bestsellersGrid"></div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Lo que dicen</div>
+        <h2 class="section-title">+5.000 clientes satisfechos</h2>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Llegaron rapidísimo y son 100% originales. Las Nike Air Force quedaron increíbles. Definitivamente vuelvo a comprar acá."</p>
+        <div class="review-author">
+          <div class="review-avatar">👦</div>
+          <div>
+            <div class="review-name">Matías G.</div>
+            <div class="review-meta">Buenos Aires · <span class="review-verified">✓ Compra verificada</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"El mejor sitio para comprar zapatillas. La guía de talles es muy precisa y el cambio fue re fácil cuando pedí una talla más grande."</p>
+        <div class="review-author">
+          <div class="review-avatar">👩</div>
+          <div>
+            <div class="review-name">Valentina M.</div>
+            <div class="review-meta">Córdoba · <span class="review-verified">✓ Compra verificada</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Compré las Adidas Ultraboost y llegaron en 2 días hábiles. El packaging es impecable y el precio es imbatible. Muy recomendado."</p>
+        <div class="review-author">
+          <div class="review-avatar">🧔</div>
+          <div>
+            <div class="review-name">Lucas R.</div>
+            <div class="review-meta">Rosario · <span class="review-verified">✓ Compra verificada</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="section-eyebrow" style="display:inline-block;margin-bottom:var(--sp-sm)">Comunidad SoleStore</div>
+    <h2>Sumate y conseguí<br><em style="color:var(--lime);font-style:normal">10% OFF</em> en tu primera compra</h2>
+    <p>Sé el primero en conocer drops exclusivos, ofertas y novedades.</p>
+    <div class="newsletter-form">
+      <input type="email" class="input" placeholder="tu@email.com">
+      <button class="btn btn-primary" onclick="showToast('🎉 ¡Bienvenido! Tu código llegará en segundos.')">Suscribirme</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">SOLE<span>STORE</span></div>
+        <p>El destino número uno de sneakers premium en Argentina. Originales, con garantía y envío a todo el país.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="#" title="Instagram">📸</a>
+          <a class="footer-social" href="#" title="TikTok">🎵</a>
+          <a class="footer-social" href="#" title="Facebook">👥</a>
+          <a class="footer-social" href="#" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Cómo comprar</a></li>
+          <li><a href="#">Envíos y tiempos</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Guía de talles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Marcas</h4>
+        <ul>
+          <li><a href="#">Nike</a></li>
+          <li><a href="#">Adidas</a></li>
+          <li><a href="#">Puma</a></li>
+          <li><a href="#">Converse</a></li>
+          <li><a href="#">Fila</a></li>
+          <li><a href="#">DC Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Trabajá con nosotros</a></li>
+          <li><a href="#">Prensa</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos y privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2025 SoleStore. Todos los derechos reservados.</div>
+      <div class="footer-payments">
+        <span class="payment-chip">Visa</span>
+        <span class="payment-chip">Mastercard</span>
+        <span class="payment-chip">Amex</span>
+        <span class="payment-chip">Mercado Pago</span>
+        <span class="payment-chip">Naranja X</span>
+        <span class="payment-chip">Débito</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE: SHIPPING -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-shipping" class="page">
+  <div class="checkout-page">
+    <div class="checkout-inner">
+      <div class="checkout-progress">
+        <span class="progress-step">Carrito</span>
+        <span class="progress-sep">›</span>
+        <span class="progress-step active">Envío</span>
+        <span class="progress-sep">›</span>
+        <span class="progress-step">Pago</span>
+      </div>
+
+      <div class="order-summary-pill">
+        <div class="order-summary-left">
+          🛒 <span>Resumen del Pedido</span>
+        </div>
+        <div class="order-summary-price">
+          <span id="shippingTotal">$380.00</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+
+      <h1 class="checkout-title">Información de Envío</h1>
+      <p class="checkout-sub">Completá tus datos para recibir tu pedido.</p>
+
+      <div class="checkout-section">
+        <div class="checkout-section-title">👤 Contacto</div>
+        <div class="form-group">
+          <label class="form-label">Correo Electrónico</label>
+          <input type="email" class="input" style="width:100%" placeholder="tu@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Teléfono</label>
+          <input type="tel" class="input" style="width:100%" placeholder="+54 11 1234 5678">
+        </div>
+      </div>
+
+      <div class="checkout-section">
+        <div class="checkout-section-title">🚚 Dirección de Envío</div>
+        <div class="form-group">
+          <label class="form-label">Nombre Completo</label>
+          <input type="text" class="input" style="width:100%" placeholder="Ej. Juan Pérez">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Dirección (Calle, Número)</label>
+          <input type="text" class="input" style="width:100%" placeholder="Ej. Av. Siempre Viva 742">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Piso / Dpto (opcional)</label>
+          <input type="text" class="input" style="width:100%" placeholder="Ej. 3° B">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Ciudad</label>
+            <input type="text" class="input" style="width:100%" placeholder="Ciudad">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Código Postal</label>
+            <input type="text" class="input" style="width:100%" placeholder="0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Provincia</label>
+          <select class="input" style="width:100%">
+            <option value="">Seleccioná una provincia</option>
+            <option>Buenos Aires</option>
+            <option>CABA</option>
+            <option>Córdoba</option>
+            <option>Santa Fe</option>
+            <option>Mendoza</option>
+            <option>Tucumán</option>
+            <option>Otras</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full btn-lg" onclick="showPage('payment')" style="margin-bottom:8px">
+        Continuar al Pago →
+      </button>
+      <p style="text-align:center;font-size:12px;color:var(--muted)">🔒 Pago seguro y encriptado</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE: PAYMENT -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-payment" class="page">
+  <div class="checkout-page">
+    <div class="checkout-inner">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:var(--sp-lg)">
+        <button onclick="showPage('shipping')" style="color:var(--muted);display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600">
+          ← Volver
+        </button>
+        <h1 class="checkout-title" style="margin:0">Checkout</h1>
+      </div>
+
+      <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Método de Pago</h2>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:var(--sp-md)">Seleccioná cómo querés pagar tu orden.</p>
+
+      <div class="payment-options">
+        <div class="payment-option selected" onclick="selectPayment(this)">
+          <div class="payment-option-left">
+            <span>💳</span>
+            <span>Tarjeta de Crédito / Débito</span>
+          </div>
+          <div class="payment-radio"></div>
+        </div>
+        <div class="payment-option" onclick="selectPayment(this)">
+          <div class="payment-option-left">
+            <span>🟦</span>
+            <span>Mercado Pago</span>
+          </div>
+          <div class="payment-radio"></div>
+        </div>
+        <div class="payment-option" onclick="selectPayment(this)">
+          <div class="payment-option-left">
+            <span>📱</span>
+            <span>Apple Pay</span>
+          </div>
+          <div class="payment-radio"></div>
+        </div>
+      </div>
+
+      <div class="checkout-section">
+        <div class="card-fields">
+          <div class="form-group">
+            <label class="form-label">Número de Tarjeta</label>
+            <input type="text" class="input" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="19">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Expiración</label>
+              <input type="text" class="input" style="width:100%" placeholder="MM/AA" maxlength="5">
+            </div>
+            <div class="form-group">
+              <label class="form-label">CVV ⓘ</label>
+              <input type="text" class="input" style="width:100%" placeholder="•••" maxlength="4">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nombre en la Tarjeta</label>
+            <input type="text" class="input" style="width:100%" placeholder="Nombre completo">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Cuotas</label>
+            <select class="input" style="width:100%">
+              <option>1 cuota sin interés — $380.00</option>
+              <option>3 cuotas sin interés — $126.67/mes</option>
+              <option>6 cuotas sin interés — $63.33/mes</option>
+              <option>12 cuotas sin interés — $31.67/mes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-section">
+        <div class="checkout-section-title">Resumen</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">Subtotal (2 productos)</span>
+            <span>$380.00</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">Envío</span>
+            <span style="color:var(--lime);font-weight:700">GRATIS</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:20px;font-weight:800;padding-top:12px;border-top:1px solid var(--outline);margin-top:4px">
+            <span>TOTAL</span>
+            <span style="color:var(--lime)">$380.00</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full btn-lg" onclick="showPage('confirmation')" style="margin-bottom:8px">
+        🔒 Pagar Ahora
+      </button>
+      <p style="text-align:center;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">🛡️ Pago 100% seguro (SSL)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE: CONFIRMATION -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-confirmation" class="page">
+  <div class="confirmation-page">
+    <div class="confirmation-inner">
+      <div class="confirm-icon">✓</div>
+      <h1 class="confirm-title">¡PEDIDO CONFIRMADO!</h1>
+      <p class="confirm-sub">Tu estilo está en camino. Prepará el asfalto.</p>
+
+      <div class="confirm-card">
+        <div class="confirm-row">
+          <div>
+            <div class="confirm-row-label">Nº de Orden</div>
+            <div class="confirm-row-val" style="font-size:18px">#SL-<span id="orderNum"></span></div>
+          </div>
+          <span style="font-size:24px">🧾</span>
+        </div>
+        <div class="confirm-row">
+          <div>
+            <div class="confirm-row-label">Estimación de Entrega</div>
+            <div class="confirm-row-val">🚚 <span id="deliveryDate"></span></div>
+          </div>
+        </div>
+        <div class="confirm-row">
+          <div>
+            <div class="confirm-row-label">Método de Pago</div>
+            <div class="confirm-row-val">💳 Termina en •••• 4242</div>
+          </div>
+        </div>
+        <div class="confirm-row">
+          <div>
+            <div class="confirm-row-label">Total Pagado</div>
+            <div class="confirm-row-val" style="color:var(--lime)">$380.00</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full btn-lg" onclick="showPage('home');resetCart()">
+        Seguir Comprando
+      </button>
+      <p style="margin-top:12px;font-size:12px;color:var(--muted)">Te enviamos el comprobante a tu email ✉️</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CART SIDEBAR -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h2>Tu Carrito</h2>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-summary-row">
+      <span style="color:var(--muted)">Subtotal</span>
+      <span id="cartSubtotal">$380.00</span>
+    </div>
+    <div class="cart-summary-row">
+      <span style="color:var(--muted)">Envío</span>
+      <span style="color:var(--lime);font-weight:700">GRATIS</span>
+    </div>
+    <div class="cart-summary-row total">
+      <span>Total</span>
+      <span id="cartTotal">$380.00</span>
+    </div>
+    <div class="cart-cta">
+      <button class="btn btn-primary btn-full btn-lg" onclick="closeCart();showPage('shipping')">
+        Finalizar Compra
+      </button>
+    </div>
+    <p class="cart-secure">🔒 Secure Checkout</p>
+  </div>
+</div>
+
+<!-- SIZE MODAL -->
+<div class="modal-overlay" id="sizeModal">
+  <div class="modal-panel">
+    <div class="modal-handle"></div>
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:4px">Elegí tu talle</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:4px">Tallas en US</p>
+    <p id="modalProductName" style="font-size:14px;font-weight:700;color:var(--lime)"></p>
+    <div class="size-grid">
+      <button class="size-btn unavailable">6</button>
+      <button class="size-btn" onclick="selectSize(this,'6.5')">6.5</button>
+      <button class="size-btn" onclick="selectSize(this,'7')">7</button>
+      <button class="size-btn" onclick="selectSize(this,'7.5')">7.5</button>
+      <button class="size-btn" onclick="selectSize(this,'8')">8</button>
+      <button class="size-btn" onclick="selectSize(this,'8.5')">8.5</button>
+      <button class="size-btn" onclick="selectSize(this,'9')">9</button>
+      <button class="size-btn" onclick="selectSize(this,'9.5')">9.5</button>
+      <button class="size-btn" onclick="selectSize(this,'10')">10</button>
+      <button class="size-btn" onclick="selectSize(this,'10.5')">10.5</button>
+      <button class="size-btn" onclick="selectSize(this,'11')">11</button>
+      <button class="size-btn unavailable">11.5</button>
+      <button class="size-btn" onclick="selectSize(this,'12')">12</button>
+      <button class="size-btn" onclick="selectSize(this,'13')">13</button>
+      <button class="size-btn unavailable">14</button>
+    </div>
+    <button id="addToCartBtn" class="btn btn-primary btn-full" disabled style="opacity:0.4" onclick="confirmAddToCart()">
+      Seleccioná un talle
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/541112345678" target="_blank" title="Consultar por WhatsApp">💬</a>
+
+<script src="js/app.js"></script>
+</body>
+</html>
